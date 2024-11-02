@@ -1,31 +1,31 @@
 fileFormatVersion: 2
-guid: 56b1defd64ec64397b92b7c855143f2c
+guid: 98cebbeb281aa46e398fd8d7c02e59c0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6504800375707637980
-    second: Undead Eagle PNG_0
+      213: -2917579833436426974
+    second: eagle flight_0
   - first:
-      213: 8655415914587663166
-    second: Undead Eagle PNG_1
+      213: -7926365839666529876
+    second: eagle flight_1
   - first:
-      213: 568624078269722985
-    second: Undead Eagle PNG_2
+      213: -8789076314188913720
+    second: eagle flight_2
   - first:
-      213: -2463149057379993983
-    second: Undead Eagle PNG_3
+      213: -2051008647107122432
+    second: eagle flight_3
   - first:
-      213: 7858240849108166706
-    second: Undead Eagle PNG_4
+      213: 3636351120532120366
+    second: eagle flight_4
   - first:
-      213: -4234753289552135011
-    second: Undead Eagle PNG_5
+      213: -6300917708594348093
+    second: eagle flight_5
   - first:
-      213: -1157262425764532505
-    second: Undead Eagle PNG_6
+      213: 8913083442331461451
+    second: eagle flight_6
   - first:
-      213: 7618116407217247320
-    second: Undead Eagle PNG_7
+      213: -6034977881093519254
+    second: eagle flight_7
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -121,13 +121,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Undead Eagle PNG_0
+      name: eagle flight_0
       rect:
         serializedVersion: 2
-        x: 22
-        y: 22
-        width: 28
-        height: 27
+        x: 15
+        y: 26
+        width: 27
+        height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -136,18 +136,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cd891e05a71b54a50800000000000000
-      internalID: 6504800375707637980
+      spriteID: 22dad28799ca287d0800000000000000
+      internalID: -2917579833436426974
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Undead Eagle PNG_1
+      name: eagle flight_1
       rect:
         serializedVersion: 2
-        x: 86
-        y: 23
+        x: 79
+        y: 27
         width: 28
         height: 21
       alignment: 0
@@ -158,20 +158,64 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e3ba24c7ae63e1870800000000000000
-      internalID: 8655415914587663166
+      spriteID: ca9b2e6b344eff190800000000000000
+      internalID: -7926365839666529876
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Undead Eagle PNG_2
+      name: eagle flight_2
       rect:
         serializedVersion: 2
-        x: 150
+        x: 143
+        y: 28
+        width: 28
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c368f4a8ade60680800000000000000
+      internalID: -8789076314188913720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: eagle flight_3
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 23
+        width: 27
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00beced808a5983e0800000000000000
+      internalID: -2051008647107122432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: eagle flight_4
+      rect:
+        serializedVersion: 2
+        x: 271
         y: 24
-        width: 28
-        height: 12
+        width: 27
+        height: 15
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -180,20 +224,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9613004269824e700800000000000000
-      internalID: 568624078269722985
+      spriteID: e2329e1f31ae67230800000000000000
+      internalID: 3636351120532120366
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Undead Eagle PNG_3
+      name: eagle flight_5
       rect:
         serializedVersion: 2
-        x: 214
+        x: 335
         y: 23
-        width: 28
-        height: 11
+        width: 27
+        height: 15
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -202,20 +246,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 186f60e8bf221ddd0800000000000000
-      internalID: -2463149057379993983
+      spriteID: 3cff34c4ab4ae88a0800000000000000
+      internalID: -6300917708594348093
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Undead Eagle PNG_4
+      name: eagle flight_6
       rect:
         serializedVersion: 2
-        x: 278
-        y: 14
+        x: 399
+        y: 28
         width: 28
-        height: 20
+        height: 9
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -224,62 +268,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2386e82ea641e0d60800000000000000
-      internalID: 7858240849108166706
+      spriteID: b472591da22a1bb70800000000000000
+      internalID: 8913083442331461451
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Undead Eagle PNG_5
+      name: eagle flight_7
       rect:
         serializedVersion: 2
-        x: 342
-        y: 23
-        width: 28
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d9cf3d0e1522b35c0800000000000000
-      internalID: -4234753289552135011
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Undead Eagle PNG_6
-      rect:
-        serializedVersion: 2
-        x: 406
-        y: 24
-        width: 28
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7eee56884f390ffe0800000000000000
-      internalID: -1157262425764532505
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Undead Eagle PNG_7
-      rect:
-        serializedVersion: 2
-        x: 470
-        y: 23
+        x: 463
+        y: 27
         width: 28
         height: 21
       alignment: 0
@@ -290,8 +290,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 85452c5828cf8b960800000000000000
-      internalID: 7618116407217247320
+      spriteID: a68c41287937f3ca0800000000000000
+      internalID: -6034977881093519254
       vertices: []
       indices: 
       edges: []
@@ -300,7 +300,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 4303122bf31df4e4fbbba21782b21db3
+    spriteID: 18657bae2954e4f12a42f3e13e51233e
     internalID: 0
     vertices: []
     indices: 
@@ -310,14 +310,14 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Undead Eagle PNG_0: 6504800375707637980
-      Undead Eagle PNG_1: 8655415914587663166
-      Undead Eagle PNG_2: 568624078269722985
-      Undead Eagle PNG_3: -2463149057379993983
-      Undead Eagle PNG_4: 7858240849108166706
-      Undead Eagle PNG_5: -4234753289552135011
-      Undead Eagle PNG_6: -1157262425764532505
-      Undead Eagle PNG_7: 7618116407217247320
+      eagle flight_0: -2917579833436426974
+      eagle flight_1: -7926365839666529876
+      eagle flight_2: -8789076314188913720
+      eagle flight_3: -2051008647107122432
+      eagle flight_4: 3636351120532120366
+      eagle flight_5: -6300917708594348093
+      eagle flight_6: 8913083442331461451
+      eagle flight_7: -6034977881093519254
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

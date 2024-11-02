@@ -94,18 +94,18 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
-    wrapU: 1
-    wrapV: 1
-    wrapW: 1
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
@@ -600,7 +600,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -609,7 +609,27 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      bg bigger exportable_Layer 5_0: 2323277136499547480
+      bg bigger exportable_Layer 5_1: 3501676244680330436
+      bg bigger exportable_Layer 5_10: -3688258302335038773
+      bg bigger exportable_Layer 5_11: -3458536178463559094
+      bg bigger exportable_Layer 5_12: -4642156035237265529
+      bg bigger exportable_Layer 5_13: 2342213495620683575
+      bg bigger exportable_Layer 5_14: -3968467970635275706
+      bg bigger exportable_Layer 5_15: 8728990836951126092
+      bg bigger exportable_Layer 5_16: -2409971414282314701
+      bg bigger exportable_Layer 5_17: -8936475560665196898
+      bg bigger exportable_Layer 5_18: -6936022543712751484
+      bg bigger exportable_Layer 5_19: -2602512397835534584
+      bg bigger exportable_Layer 5_2: -5743420367318654139
+      bg bigger exportable_Layer 5_3: -7481738916026438006
+      bg bigger exportable_Layer 5_4: 7478922243309124444
+      bg bigger exportable_Layer 5_5: 895101479919736788
+      bg bigger exportable_Layer 5_6: -607850816165817710
+      bg bigger exportable_Layer 5_7: -7862240484577161049
+      bg bigger exportable_Layer 5_8: 7309695845536387472
+      bg bigger exportable_Layer 5_9: 614948526040842974
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
