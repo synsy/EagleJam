@@ -31,7 +31,8 @@ public class PlayerController : MonoBehaviour
 
     private void MovePlayer()
     {
-        rb.linearVelocity = inputDirection * moveSpeed;
+        if(Player.instance.canMove)
+            rb.linearVelocity = inputDirection * moveSpeed;
     }
 
     private void ConstrainToCameraBounds()
@@ -49,5 +50,10 @@ public class PlayerController : MonoBehaviour
 
         // Apply the clamped position to the player
         transform.position = clampedPosition;
+    }
+
+    public void StopMovement()
+    {
+        rb.linearVelocity = Vector2.zero;
     }
 }
