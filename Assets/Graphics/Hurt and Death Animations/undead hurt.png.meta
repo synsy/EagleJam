@@ -322,7 +322,15 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      undead hurt_0: -2792225566597335484
+      undead hurt_1: -7670129601787844373
+      undead hurt_2: 3472799901254680929
+      undead hurt_3: 869838364676205188
+      undead hurt_4: 2121316355573623148
+      undead hurt_5: -3336406055803112675
+      undead hurt_6: -6322404906501285503
+      undead hurt_7: -8230296622184319578
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

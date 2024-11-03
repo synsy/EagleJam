@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      bg underworld_Layer 8_Layer 0_0: 9213069085503428587
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -22,6 +22,13 @@ public class PlayerAnimations : MonoBehaviour
         }
     }
 
+    
+    public void DeathAnimation()
+    {
+        animator.SetTrigger("GameOverDeath");
+    }
+
+
     public void PlayerHit()
     {
         StartCoroutine(FlashRed());

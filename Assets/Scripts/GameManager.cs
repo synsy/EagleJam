@@ -135,6 +135,7 @@ public class GameManager : MonoBehaviour
         Player.instance.GetComponent<PlayerController>().StopMovement();
         ProjectileSpawner.instance.StopProjectiles();
         StartCoroutine(EndGame());
+        Player.instance.GetComponent<PlayerAnimations>().DeathAnimation();
     }
 
     private IEnumerator EndGame()
