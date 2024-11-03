@@ -10,14 +10,6 @@ public class PlayerInput : MonoBehaviour
         playerController = GetComponent<PlayerController>();
     }
 
-    void Update()
-    {
-        if(Input.GetKeyDown(KeyCode.Space))
-            {
-                Player.instance.Die();
-            }
-    }
-
     private void FixedUpdate()
     {
         if(Player.instance.canMove)

@@ -6,6 +6,7 @@ using UnityEngine;
 [RequireComponent(typeof(SpriteRenderer))]
 [RequireComponent(typeof(PlayerInput))]
 [RequireComponent(typeof(PlayerController))]
+[RequireComponent(typeof(PlayerAnimations))]
 public class Player : MonoBehaviour
 {
     public static Player instance;
@@ -37,11 +38,21 @@ public class Player : MonoBehaviour
         }
     }
 
+    public void Heal(int healAmount)
+    {
+        currentHealth += healAmount;
+        if (currentHealth > maxHealth)
+        {
+            currentHealth = maxHealth;
+        }
+    }
+
     public void Die()
     {
         if(GameManager.instance.currentWorldState == GameManager.WorldState.Alive)
         {
             GameManager.instance.SetGameState(GameManager.GameState.Dying);
+            return;
         }
 
         if(GameManager.instance.currentWorldState == GameManager.WorldState.Undead)

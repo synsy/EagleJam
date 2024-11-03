@@ -1,4 +1,5 @@
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 
@@ -11,6 +12,7 @@ public class GameManager : MonoBehaviour
         Undead
     }
 
+    [SerializeField]
     public WorldState currentWorldState { get; private set; }
 
     public enum GameState
@@ -20,6 +22,7 @@ public class GameManager : MonoBehaviour
         GameOver
     }
 
+    [SerializeField]
     public GameState currentGameState { get; private set; }
 
     public Light2D globalLight;
@@ -39,11 +42,6 @@ public class GameManager : MonoBehaviour
 
         currentWorldState = WorldState.Alive;
         currentGameState = GameState.Playing;
-    }
-
-    void Start()
-    {
-        
     }
 
     public void SetWorldState(WorldState state)
@@ -79,6 +77,7 @@ public class GameManager : MonoBehaviour
     {
         Player.instance.canMove = false;
         Player.instance.GetComponent<PlayerController>().StopMovement();
+        ProjectileSpawner.instance.StopProjectiles();
         StartCoroutine(ChangeWorld());
 
     }
@@ -102,6 +101,8 @@ public class GameManager : MonoBehaviour
         globalLight.color = targetColor;
         elapsed = 0f; // Reset elapsed time
         ChangeBackgrounds();
+        ProjectileSpawner.instance.ResetProjectiles();
+        Player.instance.GetComponent<PlayerAnimations>().SwitchAnimation();
         yield return new WaitForSeconds(0.5f); // Wait for 1 second
         while (elapsed < fadeDuration)
         {
@@ -110,7 +111,7 @@ public class GameManager : MonoBehaviour
             elapsed += Time.deltaTime; // Increment elapsed time
             yield return null; // Wait for the next frame
         }
-
+        Player.instance.GetComponent<Player>().Heal(3);
         // Ensure the final color is set to black
         globalLight.color = startColor;
         SetGameState(GameState.Playing);
@@ -125,6 +126,7 @@ public class GameManager : MonoBehaviour
     public void EndGame()
     {
         // End the game
+        print("GAME OVER");
     }
 
     public void ChangeBackgrounds()
