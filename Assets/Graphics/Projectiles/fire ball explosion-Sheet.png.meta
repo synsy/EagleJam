@@ -79,7 +79,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -93,7 +93,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -117,7 +117,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -158,10 +158,10 @@ TextureImporter:
       name: fire ball explosion-Sheet_0
       rect:
         serializedVersion: 2
-        x: 87
-        y: 34
-        width: 12
-        height: 11
+        x: 0
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -180,10 +180,10 @@ TextureImporter:
       name: fire ball explosion-Sheet_1
       rect:
         serializedVersion: 2
-        x: 157
-        y: 39
-        width: 10
-        height: 9
+        x: 64
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -202,10 +202,10 @@ TextureImporter:
       name: fire ball explosion-Sheet_2
       rect:
         serializedVersion: 2
-        x: 226
-        y: 43
-        width: 8
-        height: 7
+        x: 128
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -224,10 +224,10 @@ TextureImporter:
       name: fire ball explosion-Sheet_3
       rect:
         serializedVersion: 2
-        x: 293
-        y: 1
-        width: 89
-        height: 54
+        x: 192
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -246,10 +246,10 @@ TextureImporter:
       name: fire ball explosion-Sheet_4
       rect:
         serializedVersion: 2
-        x: 19
-        y: 17
-        width: 32
-        height: 21
+        x: 256
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -268,10 +268,10 @@ TextureImporter:
       name: fire ball explosion-Sheet_5
       rect:
         serializedVersion: 2
-        x: 94
-        y: 28
-        width: 13
-        height: 10
+        x: 320
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -286,209 +286,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: fire ball explosion-Sheet_6
-      rect:
-        serializedVersion: 2
-        x: 166
-        y: 29
-        width: 11
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 19e8e419d92e843c0800000000000000
-      internalID: -4374997871614849391
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: fire ball explosion-Sheet_7
-      rect:
-        serializedVersion: 2
-        x: 236
-        y: 29
-        width: 11
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4e563bfffee8c7e30800000000000000
-      internalID: 4502630888901928420
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: fire ball explosion-Sheet_8
-      rect:
-        serializedVersion: 2
-        x: 86
-        y: 11
-        width: 12
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 21b90245bb4a067c0800000000000000
-      internalID: -4080080137920406766
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: fire ball explosion-Sheet_9
-      rect:
-        serializedVersion: 2
-        x: 95
-        y: 18
-        width: 13
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 01fc250ea7cb2e810800000000000000
-      internalID: 1793202837582434064
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: fire ball explosion-Sheet_10
-      rect:
-        serializedVersion: 2
-        x: 166
-        y: 19
-        width: 11
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b46a96479062f57d0800000000000000
-      internalID: -2927579410717890997
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: fire ball explosion-Sheet_11
-      rect:
-        serializedVersion: 2
-        x: 236
-        y: 19
-        width: 11
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c976df65820dbf310800000000000000
-      internalID: 1439973377551722396
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: fire ball explosion-Sheet_12
-      rect:
-        serializedVersion: 2
-        x: 307
-        y: 20
-        width: 7
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c46d7583f54906fa0800000000000000
-      internalID: -5809480382619855284
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: fire ball explosion-Sheet_13
-      rect:
-        serializedVersion: 2
-        x: 156
-        y: 8
-        width: 10
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9648e83e49d2e42b0800000000000000
-      internalID: -5598487169278770071
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: fire ball explosion-Sheet_14
-      rect:
-        serializedVersion: 2
-        x: 224
-        y: 6
-        width: 8
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 03722dd4d9cae8e00800000000000000
-      internalID: 1048965554839365424
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: b2df0804b651428459222e80921cbf71
     internalID: 0
     vertices: []
     indices: 
@@ -500,19 +302,10 @@ TextureImporter:
     nameFileIdTable:
       fire ball explosion-Sheet_0: -4112819406756346904
       fire ball explosion-Sheet_1: -2829874487146650335
-      fire ball explosion-Sheet_10: -2927579410717890997
-      fire ball explosion-Sheet_11: 1439973377551722396
-      fire ball explosion-Sheet_12: -5809480382619855284
-      fire ball explosion-Sheet_13: -5598487169278770071
-      fire ball explosion-Sheet_14: 1048965554839365424
       fire ball explosion-Sheet_2: -5364588894730996449
       fire ball explosion-Sheet_3: 2911304437163015427
       fire ball explosion-Sheet_4: 3399977174120658613
       fire ball explosion-Sheet_5: -5522173490702430607
-      fire ball explosion-Sheet_6: -4374997871614849391
-      fire ball explosion-Sheet_7: 4502630888901928420
-      fire ball explosion-Sheet_8: -4080080137920406766
-      fire ball explosion-Sheet_9: 1793202837582434064
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

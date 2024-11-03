@@ -143,10 +143,10 @@ TextureImporter:
       name: rock projectile_0
       rect:
         serializedVersion: 2
-        x: 24
-        y: 22
-        width: 40
-        height: 20
+        x: 0
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -165,10 +165,10 @@ TextureImporter:
       name: rock projectile_1
       rect:
         serializedVersion: 2
-        x: 88
-        y: 23
-        width: 26
-        height: 19
+        x: 64
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,10 +187,10 @@ TextureImporter:
       name: rock projectile_2
       rect:
         serializedVersion: 2
-        x: 113
-        y: 23
-        width: 5
-        height: 4
+        x: 128
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -209,10 +209,10 @@ TextureImporter:
       name: rock projectile_3
       rect:
         serializedVersion: 2
-        x: 152
-        y: 23
-        width: 30
-        height: 19
+        x: 192
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -231,10 +231,10 @@ TextureImporter:
       name: rock projectile_4
       rect:
         serializedVersion: 2
-        x: 184
-        y: 23
-        width: 5
-        height: 4
+        x: 256
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -253,10 +253,10 @@ TextureImporter:
       name: rock projectile_5
       rect:
         serializedVersion: 2
-        x: 216
-        y: 23
-        width: 40
-        height: 19
+        x: 320
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -275,10 +275,10 @@ TextureImporter:
       name: rock projectile_6
       rect:
         serializedVersion: 2
-        x: 280
-        y: 22
-        width: 40
-        height: 20
+        x: 384
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -297,10 +297,10 @@ TextureImporter:
       name: rock projectile_7
       rect:
         serializedVersion: 2
-        x: 344
-        y: 23
-        width: 39
-        height: 19
+        x: 448
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -311,50 +311,6 @@ TextureImporter:
       bones: []
       spriteID: 7d886e124e3c9e2e0800000000000000
       internalID: -2095928766975538985
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: rock projectile_8
-      rect:
-        serializedVersion: 2
-        x: 408
-        y: 23
-        width: 36
-        height: 19
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f7527f0bbd69a44e5a73d8b76a67e6a6
-      internalID: -1778169010286359470
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: rock projectile_9
-      rect:
-        serializedVersion: 2
-        x: 472
-        y: 23
-        width: 40
-        height: 19
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: eb86ef60a21324a799bd571834d82d09
-      internalID: 8607867019922565916
       vertices: []
       indices: 
       edges: []
@@ -381,8 +337,6 @@ TextureImporter:
       rock projectile_5: 3760489849093486554
       rock projectile_6: 8558560051804272992
       rock projectile_7: -2095928766975538985
-      rock projectile_8: -1778169010286359470
-      rock projectile_9: 8607867019922565916
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
