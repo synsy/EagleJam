@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
+    public float initialSpeed = 4f;
     public float speed = 4f;
     private int damage = 1;
     private Rigidbody2D rb;
@@ -47,6 +48,11 @@ public class Projectile : MonoBehaviour
         gameObject.SetActive(false);
     }
 
+    public void ResetSpeed()
+    {
+        speed = initialSpeed;
+    }
+
     private void SwitchAnimation(string anim)
     {
         if(anim == "Fireball")
@@ -65,8 +71,14 @@ public class Projectile : MonoBehaviour
         rb.linearVelocity = Vector2.zero;
     }
 
+    private void UpdateProjectileSpeed()
+{
+    speed = Mathf.Min(20f, 4f + Player.instance.GetScore() * 1.001f);
+}
+
     void Update()
     {
+        UpdateProjectileSpeed();
         // Deactivate the projectile if it goes offscreen
         if (transform.position.x < -10f)
         {

@@ -7,10 +7,11 @@ public class ProjectileSpawner : MonoBehaviour
     public GameObject projectilePrefab;
     public Transform spawnPointTop;
     public Transform spawnPointBottom;
+    public float initialFireRate = 0.5f;
     public float fireRate = 0.5f;
     private float nextFire = 0f;
 
-    public int poolSize = 10; // Number of projectiles to pre-instantiate
+    public int poolSize = 30; // Number of projectiles to pre-instantiate
     private List<GameObject> projectilePool;
 
     void Awake()
@@ -45,6 +46,7 @@ public class ProjectileSpawner : MonoBehaviour
     {
         if(GameManager.instance.currentGameState == GameManager.GameState.Playing)
         {
+            fireRate = Mathf.Max(0.1f, 0.5f - (Player.instance.GetScore() * 0.01f));
             if (Time.time > nextFire)
             {
                 nextFire = Time.time + fireRate;
@@ -83,6 +85,15 @@ public class ProjectileSpawner : MonoBehaviour
         foreach (GameObject projectile in projectilePool)
         {
             projectile.GetComponent<Projectile>().StopMovement();
+        }
+    }
+
+    public void ResetSpeeds()
+    {
+        fireRate = initialFireRate;
+        foreach (GameObject projectile in projectilePool)
+        {
+            projectile.GetComponent<Projectile>().ResetSpeed();
         }
     }
 

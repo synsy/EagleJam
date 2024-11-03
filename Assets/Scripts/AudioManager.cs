@@ -5,6 +5,9 @@ public class AudioManager : MonoBehaviour
     public static AudioManager instance;
     public AudioSource musicSource;
     public AudioSource sfxSource;
+    public AudioClip musicClip;
+    public AudioClip hitClip;
+    public AudioClip dieClip;
 
     private void Awake()
     {

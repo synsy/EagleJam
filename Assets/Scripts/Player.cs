@@ -38,6 +38,7 @@ public class Player : MonoBehaviour
         currentHealth -= damage;
         UIManager.instance.UpdatePlayerHealth(currentHealth);
         PlayerAnimations playerAnims = GetComponent<PlayerAnimations>();
+        AudioManager.instance.PlaySFX(AudioManager.instance.hitClip);
         playerAnims.PlayerHit();
         if (currentHealth <= 0)
         {
@@ -57,6 +58,7 @@ public class Player : MonoBehaviour
 
     public void Die()
     {
+        AudioManager.instance.PlaySFX(AudioManager.instance.dieClip);
         if(GameManager.instance.currentWorldState == GameManager.WorldState.Alive)
         {
             GameManager.instance.SetGameState(GameManager.GameState.Dying);

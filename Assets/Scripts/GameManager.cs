@@ -29,6 +29,7 @@ public class GameManager : MonoBehaviour
     public Light2D glowLight;
     private float fadeDuration = 1.3f;
     public GameObject[] backgrounds = new GameObject[2];
+    private Vector3 playersLastPosition;
 
     private void Awake()
     {
@@ -76,6 +77,9 @@ public class GameManager : MonoBehaviour
     }
     private void HandleDyingState()
     {
+        Player.instance.GetComponent<PlayerAnimations>().SwitchAnimation();
+        playersLastPosition = Player.instance.transform.position;
+        Player.instance.GetComponent<Rigidbody2D>().gravityScale = 1;
         Player.instance.canMove = false;
         Player.instance.GetComponent<PlayerController>().StopMovement();
         ProjectileSpawner.instance.StopProjectiles();
@@ -106,6 +110,8 @@ public class GameManager : MonoBehaviour
         glowLight.color = Color.red;
         ProjectileSpawner.instance.ResetProjectiles();
         Player.instance.GetComponent<PlayerAnimations>().SwitchAnimation();
+        Player.instance.GetComponent<Rigidbody2D>().gravityScale = 0;
+        Player.instance.transform.position = playersLastPosition;
         yield return new WaitForSeconds(0.5f); // Wait for 1 second
         while (elapsed < fadeDuration)
         {
@@ -118,6 +124,7 @@ public class GameManager : MonoBehaviour
         Player.instance.GetComponent<Player>().Heal(3);
         // Ensure the final color is set to white
         globalLight.color = startColor;
+        ProjectileSpawner.instance.ResetSpeeds();
         SetGameState(GameState.Playing);
         yield return null;
     }
