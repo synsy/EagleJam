@@ -1,0 +1,15 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI.uss?fileID=7433441132597879392&amp;guid=3ff1dd488b58e478d8b23109a42ff5c5&amp;type=3#UI" />
+    <ui:VisualElement name="hudContainer" style="flex-grow: 1; -unity-text-outline-width: 4px; flex-direction: row; flex-wrap: nowrap; justify-content: space-between; align-self: auto; align-items: flex-start; align-content: center;">
+        <ui:Label text="Health:" name="healthLabel" style="font-size: 48px; color: rgb(255, 255, 255); -unity-font-style: bold; -unity-font-definition: url(&quot;project://database/Assets/UI%20Toolkit/UnityThemes/UnityDefaultRuntimeTheme.tss?fileID=2230732570650464555&amp;guid=0f7b15a3a891d45a9b3775cef69390f3&amp;type=3#NotInter-Regular&quot;); text-shadow: 2px 2px 1px rgb(0, 0, 0); -unity-text-outline-width: 0; left: 22px;">
+            <ui:Label name="health" style="font-size: 48px; color: rgb(255, 255, 255); right: auto; left: 6327%; position: absolute; top: -40%;" />
+        </ui:Label>
+        <ui:Label text="Score:" name="scoreLabel" style="font-size: 48px; color: rgb(255, 255, 255); -unity-font-style: bold; -unity-font-definition: url(&quot;project://database/Assets/UI%20Toolkit/UnityThemes/UnityDefaultRuntimeTheme.tss?fileID=2230732570650464555&amp;guid=0f7b15a3a891d45a9b3775cef69390f3&amp;type=3#NotInter-Regular&quot;); -unity-text-outline-width: 0; text-shadow: 2px 2px 1px rgb(0, 0, 0); right: 450px; position: absolute;">
+            <ui:Label name="score" style="font-size: 48px; color: rgb(255, 255, 255); right: -242px; position: absolute; top: -40%;" />
+        </ui:Label>
+    </ui:VisualElement>
+    <ui:VisualElement name="gameOverContainer" style="flex-grow: 1; opacity: 1;">
+        <ui:Label text="Death is not the end..." name="gameOverLabel" style="justify-content: flex-start; align-self: center; font-size: 50px; -unity-font-style: bold; color: rgb(255, 255, 255); text-shadow: 0 0 0 rgb(255, 255, 255);" />
+        <ui:Button text="Play Again" name="playAgain" triple-click-selects-line="false" double-click-selects-word="false" selectable="false" style="font-size: 36px; align-items: center; align-self: center; background-color: rgb(255, 255, 255); border-top-left-radius: 12px; border-top-right-radius: 12px; border-bottom-right-radius: 12px; border-bottom-left-radius: 12px; border-left-color: rgb(255, 255, 255); border-right-color: rgb(255, 255, 255); border-top-color: rgb(255, 255, 255); border-bottom-color: rgb(255, 255, 255); transition-property: all, scale; transition-duration: 0.3s, 0.3s; transition-timing-function: ease, ease; transition-delay: 0s, 0s; -unity-font-style: bold;" />
+    </ui:VisualElement>
+</ui:UXML>

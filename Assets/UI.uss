@@ -1,0 +1,13 @@
+#gameOverContainer > #playAgain:hover {
+    transition-duration: 0.2s, 0.2s;
+    transition-property: all, scale;
+    scale: 1.1 1.1;
+}
+
+#gameOverContainer > #playAgain:active {
+    transition-duration: 0.2s, 0.2s, 0.2s;
+    transition-property: all, scale, background-color;
+    scale: 0.9 0.9;
+    -unity-background-image-tint-color: rgb(255, 255, 255);
+    background-color: rgb(225, 255, 0);
+}

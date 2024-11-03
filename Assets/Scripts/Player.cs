@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(BoxCollider2D))]
@@ -13,6 +14,9 @@ public class Player : MonoBehaviour
     public int maxHealth { get; private set; }
     public int currentHealth { get; private set; }
     public bool canMove = true;
+    private int score;
+    private float scoreUpdateInterval = 2f;
+    private float timeSinceLastScoreUpdate = 0f;
     
     void Awake()
     {
@@ -32,6 +36,9 @@ public class Player : MonoBehaviour
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
+        UIManager.instance.UpdatePlayerHealth(currentHealth);
+        PlayerAnimations playerAnims = GetComponent<PlayerAnimations>();
+        playerAnims.PlayerHit();
         if (currentHealth <= 0)
         {
             Die();
@@ -45,6 +52,7 @@ public class Player : MonoBehaviour
         {
             currentHealth = maxHealth;
         }
+        UIManager.instance.UpdatePlayerHealth(currentHealth);
     }
 
     public void Die()
@@ -58,6 +66,32 @@ public class Player : MonoBehaviour
         if(GameManager.instance.currentWorldState == GameManager.WorldState.Undead)
         {
             GameManager.instance.SetGameState(GameManager.GameState.GameOver);
+        }
+    }
+
+    public int GetScore()
+    {
+        return score;
+    }
+
+    public void ResetScore()
+    {
+        score = 0;
+    }
+
+    void Update()
+    {
+        if(GameManager.instance.currentGameState == GameManager.GameState.Playing)
+        {
+            // Increase timer by the time that has passed since the last frame
+            timeSinceLastScoreUpdate += Time.deltaTime;
+
+            // Check if the interval has been reached
+            if (timeSinceLastScoreUpdate >= scoreUpdateInterval)
+            {
+                score += 1; // Increase score by 1 every interval
+                timeSinceLastScoreUpdate = 0f; // Reset the timer
+            }
         }
     }
 }

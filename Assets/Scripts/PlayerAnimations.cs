@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class PlayerAnimations : MonoBehaviour
 {
@@ -19,5 +20,26 @@ public class PlayerAnimations : MonoBehaviour
         {
             animator.SetBool("IsAlive", true);
         }
+    }
+
+    public void PlayerHit()
+    {
+        StartCoroutine(FlashRed());
+    }
+
+    // Coroutine to flash red and revert back
+    private IEnumerator FlashRed()
+    {
+        SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+        Color originalColor = spriteRenderer.color;  // Store the original color
+        
+        // Change color to red
+        spriteRenderer.color = Color.red;
+        
+        // Wait for a short moment
+        yield return new WaitForSeconds(0.1f);
+
+        // Revert to the original color
+        spriteRenderer.color = originalColor;
     }
 }
