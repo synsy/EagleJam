@@ -1,4 +1,5 @@
 using UnityEngine;
+using Unity.VisualScripting;
 
 public class AudioManager : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class AudioManager : MonoBehaviour
     public AudioSource flappingSource;
     public AudioClip flappingClip;
     public AudioClip musicClip;
+    public AudioClip undeadMusicClip;
     public AudioClip hitClip;
     public AudioClip dieClip;
 
@@ -21,13 +23,30 @@ public class AudioManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        PlayMusic(musicClip);
+        if(GameManager.instance != null)
+        {
+            if(GameManager.instance.currentWorldState == GameManager.WorldState.Undead)
+            {
+                PlayMusic(undeadMusicClip);
+            }
+            else
+            {
+                PlayMusic(musicClip);
+            }
+        }
+        
         PlayFlap(flappingClip);
+
     }
 
-    public void PlayMusic(AudioClip musicClip)
+    void Update()
     {
-        musicSource.clip = musicClip;
+
+    }
+
+    public void PlayMusic(AudioClip clip)
+    {
+        musicSource.clip = clip;
         musicSource.Play();
     }
 

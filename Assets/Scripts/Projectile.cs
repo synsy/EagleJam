@@ -7,16 +7,19 @@ public class Projectile : MonoBehaviour
     public float speed = 4f;
     private int damage = 1;
     private Rigidbody2D rb;
+    private Collider2D collider;
     private Animator animator;
 
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        collider = GetComponent<Collider2D>();
         animator = GetComponent<Animator>();
     }
 
     void OnEnable()
     {
+        collider.enabled = true;
         // Reset the projectile's velocity each time it is reused from the pool
         rb.linearVelocity = Vector2.zero;
         rb.linearVelocity = transform.right * -speed;
@@ -38,10 +41,23 @@ public class Projectile : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             Player.instance.TakeDamage(damage);
+            animator.SetTrigger("Explode");
+            //turn off collider
+            collider.enabled = false;
         }
 
-        KillProjectile();
+        //KillProjectile();
+        if(GameManager.instance.currentWorldState == GameManager.WorldState.Undead)
+        {
+            SwitchAnimation("Fireball");
+        }
     }
+
+    /*private IEnumerator ResetCollider()
+    {
+            yield return new WaitForSeconds(0.5f);
+            collider.enabled = true;
+    }*/
 
     public void KillProjectile()
     {
