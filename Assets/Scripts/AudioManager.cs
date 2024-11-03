@@ -23,17 +23,9 @@ public class AudioManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        if(GameManager.instance != null)
-        {
-            if(GameManager.instance.currentWorldState == GameManager.WorldState.Undead)
-            {
-                PlayMusic(undeadMusicClip);
-            }
-            else
-            {
-                PlayMusic(musicClip);
-            }
-        }
+
+        PlayMusic(musicClip);
+
         
         PlayFlap(flappingClip);
 
@@ -42,6 +34,12 @@ public class AudioManager : MonoBehaviour
     void Update()
     {
 
+    }
+
+    public void PlayUndeadMusic(AudioClip undeadMusicClip)
+    {
+        musicSource.clip = undeadMusicClip;
+        musicSource.Play();
     }
 
     public void PlayMusic(AudioClip clip)

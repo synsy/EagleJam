@@ -361,6 +361,8 @@ MonoBehaviour:
   backgrounds:
   - {fileID: 963382236}
   - {fileID: 2099900336}
+  audioManager: {fileID: 1987324247}
+  undeadMusicClip: {fileID: 8300000, guid: b4f7ef720ae96ae4d995534beec7c6df, type: 3}
 --- !u!4 &205092486
 Transform:
   m_ObjectHideFlags: 0
@@ -2414,6 +2416,7 @@ MonoBehaviour:
   flappingSource: {fileID: 665559984}
   flappingClip: {fileID: 8300000, guid: c1104c6391cc8b84fb8f622785ad82a3, type: 3}
   musicClip: {fileID: 8300000, guid: ea04cc9e4a3a1b442b3ebe9ee560f460, type: 3}
+  undeadMusicClip: {fileID: 0}
   hitClip: {fileID: 8300000, guid: 5c941f9d983a71e4db3ac6fb3839fc93, type: 3}
   dieClip: {fileID: 8300000, guid: f47700dba44c1984e8326564c2f7bd94, type: 3}
 --- !u!82 &1987324248

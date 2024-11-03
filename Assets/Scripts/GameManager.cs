@@ -30,6 +30,8 @@ public class GameManager : MonoBehaviour
     private float fadeDuration = 1.3f;
     public GameObject[] backgrounds = new GameObject[2];
     private Vector3 playersLastPosition;
+    public AudioManager audioManager;
+    public AudioClip undeadMusicClip;
 
     private void Awake()
     {
@@ -89,6 +91,7 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator ChangeWorld()
     {
+        audioManager.PlayUndeadMusic(undeadMusicClip);
         SetWorldState(WorldState.Undead);
         Color startColor = globalLight.color;
         Color targetColor = Color.black;
