@@ -1,5 +1,6 @@
 using UnityEngine;
 using Unity.VisualScripting;
+using System.Collections;
 
 public class AudioManager : MonoBehaviour
 {
@@ -60,13 +61,41 @@ public class AudioManager : MonoBehaviour
         sfxSource.Play();
     }
 
-    public void StopMusic()
+    public void StopMusic(AudioSource audioSource, bool fadeOut = false)
     {
-        musicSource.Stop();
+        if (fadeOut)
+        {
+            StartCoroutine(FadeOut(musicSource));
+        }
+        else
+        {
+            musicSource.Stop();
+        }
+    }
+
+    private IEnumerator FadeOut(AudioSource audioSource)
+    {
+        float startVolume = audioSource.volume;
+
+        while (audioSource.volume > 0)
+        {
+            audioSource.volume -= startVolume * Time.deltaTime / 1f;
+
+            yield return null;
+        }
+
+        audioSource.Stop();
+        audioSource.volume = startVolume;
     }
 
     public void StopSFX()
     {
         sfxSource.Stop();
+    }
+
+    public void GameOver()
+    {
+        StartCoroutine(FadeOut(musicSource));
+        StartCoroutine(FadeOut(flappingSource));
     }
 }

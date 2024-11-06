@@ -3,8 +3,8 @@ using UnityEngine;
 public class Background : MonoBehaviour
 {
     [SerializeField] private float scrollSpeed = 2f; // Speed at which the background moves
-    private const float resetPositionX = -19.9f; // X position at which reset occures
-    private const float startPositionX = 19.9f;   // X position to reset to
+    private const float resetPositionX = -19.5f; // X position at which reset occures
+    private const float startPositionX = 19.5f;   // X position to reset to
     public Sprite[] sprite;
     private SpriteRenderer spriteRenderer;
 

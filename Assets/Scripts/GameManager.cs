@@ -6,25 +6,12 @@ using UnityEngine.Rendering.Universal;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
-    public enum WorldState
-    {
-        Alive,
-        Undead
-    }
-
+    public enum WorldState{ Alive, Undead }
     [SerializeField]
     public WorldState currentWorldState { get; private set; }
-
-    public enum GameState
-    {
-        Playing,
-        Dying,
-        GameOver
-    }
-
+    public enum GameState { Playing, Dying, GameOver }
     [SerializeField]
     public GameState currentGameState { get; private set; }
-
     public Light2D globalLight;
     public Light2D glowLight;
     private float fadeDuration = 1.3f;
@@ -86,7 +73,16 @@ public class GameManager : MonoBehaviour
         Player.instance.GetComponent<PlayerController>().StopMovement();
         ProjectileSpawner.instance.StopProjectiles();
         StartCoroutine(ChangeWorld());
+    }
 
+    private void HandleGameOverState()
+    {
+        Player.instance.canMove = false;
+        Player.instance.GetComponent<PlayerController>().StopMovement();
+        ProjectileSpawner.instance.StopProjectiles();
+        StartCoroutine(EndGame());
+        Player.instance.GetComponent<PlayerAnimations>().DeathAnimation();
+        AudioManager.instance.GameOver();
     }
 
     private IEnumerator ChangeWorld()
@@ -97,6 +93,7 @@ public class GameManager : MonoBehaviour
         Color targetColor = Color.black;
         float elapsed = 0f; // Time elapsed since the start of the fade
 
+        // Fade to black
         while (elapsed < fadeDuration)
         {
             // Interpolate the color based on time elapsed
@@ -104,10 +101,10 @@ public class GameManager : MonoBehaviour
             elapsed += Time.deltaTime; // Increment elapsed time
             yield return null; // Wait for the next frame
         }
-
-        // Ensure the final color is set to black
         globalLight.color = targetColor;
         elapsed = 0f; // Reset elapsed time
+
+        // Change backgrounds and lights, reset projectiles, and move player to death location
         ChangeBackgrounds();
         glowLight.gameObject.SetActive(false);
         glowLight.color = Color.red;
@@ -115,30 +112,24 @@ public class GameManager : MonoBehaviour
         Player.instance.GetComponent<PlayerAnimations>().SwitchAnimation();
         Player.instance.GetComponent<Rigidbody2D>().gravityScale = 0;
         Player.instance.transform.position = playersLastPosition;
-        yield return new WaitForSeconds(0.5f); // Wait for 1 second
+        yield return new WaitForSeconds(0.5f);
+
+        // Fade back to white
         while (elapsed < fadeDuration)
         {
             // Interpolate the color based on time elapsed
             globalLight.color = Color.Lerp(targetColor, startColor, elapsed / fadeDuration);
-            elapsed += Time.deltaTime; // Increment elapsed time
-            yield return null; // Wait for the next frame
+            elapsed += Time.deltaTime;
+            yield return null;
         }
+        //Reset lights, player health, and projectile speeds
         glowLight.gameObject.SetActive(true);
         Player.instance.GetComponent<Player>().Heal(3);
-        // Ensure the final color is set to white
         globalLight.color = startColor;
         ProjectileSpawner.instance.ResetSpeeds();
+
         SetGameState(GameState.Playing);
         yield return null;
-    }
-
-    private void HandleGameOverState()
-    {
-        Player.instance.canMove = false;
-        Player.instance.GetComponent<PlayerController>().StopMovement();
-        ProjectileSpawner.instance.StopProjectiles();
-        StartCoroutine(EndGame());
-        Player.instance.GetComponent<PlayerAnimations>().DeathAnimation();
     }
 
     private IEnumerator EndGame()
@@ -152,13 +143,13 @@ public class GameManager : MonoBehaviour
         {
             // Interpolate the color based on time elapsed
             globalLight.color = Color.Lerp(startColor, targetColor, elapsed / fadeDuration);
-            elapsed += Time.deltaTime; // Increment elapsed time
-            yield return null; // Wait for the next frame
+            elapsed += Time.deltaTime;
+            yield return null;
         }
 
         // Ensure the final color is set to black
         globalLight.color = targetColor;
-        yield return new WaitForSeconds(0.5f); // Wait for 1 second
+        yield return new WaitForSeconds(0.5f);
         UIManager.instance.ToggleGameOverScreen(true);
     }
 
@@ -166,13 +157,11 @@ public class GameManager : MonoBehaviour
     {
         foreach (GameObject backgroundObject in backgrounds)
         {
-            // Get all children of the current GameObject
             foreach (Transform child in backgroundObject.transform)
             {
                 // Try to get the Background component
                 Background backgroundScript = child.GetComponent<Background>();
 
-                // If the Background script is found, call the ChangeBackground() method
                 if (backgroundScript != null)
                 {
                     backgroundScript.ChangeBackground();
@@ -181,34 +170,34 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void RestartGame()
-    {
-        StartCoroutine(RestartGameRoutine());
-    }
-    private IEnumerator RestartGameRoutine()
-    {
-        Player.instance.transform.position = new Vector3(-8, 0, 0);
-        Player.instance.ResetScore();
-        Player.instance.GetComponent<Player>().Heal(3);
-        ProjectileSpawner.instance.ResetProjectiles();
-        UIManager.instance.ToggleGameOverScreen(false);
-        Color startColor = globalLight.color;
-        Color targetColor = Color.white;
-        float elapsed = 0f;
-        while (elapsed < fadeDuration)
-        {
-            // Interpolate the color based on time elapsed
-            globalLight.color = Color.Lerp(targetColor, startColor, elapsed / fadeDuration);
-            elapsed += Time.deltaTime; // Increment elapsed time
-            yield return null; // Wait for the next frame
-        }
-        glowLight.gameObject.SetActive(true);
-        Player.instance.GetComponent<Player>().Heal(3);
-        // Ensure the final color is set to white
-        globalLight.color = startColor;
-        SetWorldState(WorldState.Alive);
-        SetGameState(GameState.Playing);
-    }
+    // public void RestartGame()
+    // {
+    //     StartCoroutine(RestartGameRoutine());
+    // }
+    // private IEnumerator RestartGameRoutine()
+    // {
+    //     Player.instance.transform.position = new Vector3(-8, 0, 0);
+    //     Player.instance.ResetScore();
+    //     Player.instance.GetComponent<Player>().Heal(3);
+    //     ProjectileSpawner.instance.ResetProjectiles();
+    //     UIManager.instance.ToggleGameOverScreen(false);
+    //     Color startColor = globalLight.color;
+    //     Color targetColor = Color.white;
+    //     float elapsed = 0f;
+    //     while (elapsed < fadeDuration)
+    //     {
+    //         // Interpolate the color based on time elapsed
+    //         globalLight.color = Color.Lerp(targetColor, startColor, elapsed / fadeDuration);
+    //         elapsed += Time.deltaTime; // Increment elapsed time
+    //         yield return null; // Wait for the next frame
+    //     }
+    //     glowLight.gameObject.SetActive(true);
+    //     Player.instance.GetComponent<Player>().Heal(3);
+    //     // Ensure the final color is set to white
+    //     globalLight.color = startColor;
+    //     SetWorldState(WorldState.Alive);
+    //     SetGameState(GameState.Playing);
+    // }
 
     void Update()
     {
